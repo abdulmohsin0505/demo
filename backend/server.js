@@ -7,9 +7,13 @@ const corsOptions = require("./config/corsOption")
 const port = 3000
 
 // cross origin resource sharing
-app.use(cors(corsOptions))
+app.use(cors({
+    origin : ["demo-ashy-phi.vercel.app/"],
+    methods : ["POST","GET"],
+    credentials : true
+}))
 app.get("/",(req,res) => {
-    res.send("Hello world")
+    res.json("Hello world")
 })
 
 app.listen(port, () => console.log("server running on 3000"));
