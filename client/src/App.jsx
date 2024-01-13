@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("demo-ashy-phi.vercel.app/")
+      const res = await fetch("https://demo-ashy-phi.vercel.app/")
       const data = await res.text()
       console.log(data)
       setText(data)
