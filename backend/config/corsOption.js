@@ -1,7 +1,7 @@
 const whiteList = [
     "https://www.google.com",
     "http://localhost:5173",
-    "demo-cdtk4rcsb-mohsin050595-gmailcoms-projects.vercel.app"
+    "https://demo-ashy-phi.vercel.app/"
 ]
 
 const corsOptions = {
