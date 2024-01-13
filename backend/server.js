@@ -7,13 +7,13 @@ const cors = require("cors")
 const port = process.env.port || 3000
 
 // cross origin resource sharing
-app.use(cors({
-    origin : ["https://demo-frontend-bay.vercel.app/","demo-ashy-phi.vercel.app"],
-    methods : ["POST","GET"],
-    credentials : true
-}))
+// app.use(cors({
+//     origin : ["https://demo-frontend-bay.vercel.app/","demo-ashy-phi.vercel.app"],
+//     methods : ["POST","GET"],
+//     credentials : true
+// }))
 app.get("/",(req,res) => {
-    res.json("Hello world")
+    res.send("Hello world")
 })
 
 app.listen(port, () => console.log("server running on 3000"));
