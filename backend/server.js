@@ -8,7 +8,7 @@ const port = process.env.port || 3000
 
 // cross origin resource sharing
 app.use(cors({
-    origin : ["https://demo-frontend-bay.vercel.app/"],
+    origin : ["https://demo-frontend-bay.vercel.app/","demo-ashy-phi.vercel.app"],
     methods : ["POST","GET"],
     credentials : true
 }))
