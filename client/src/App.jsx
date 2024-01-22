@@ -1,23 +1,22 @@
-// import { useEffect, useState } from 'react'
-
 import './App.css'
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import Login from './components/Login'
+import Home from './components/Home'
+import Dashboard from './components/Dashboard'
+import Register from "./components/Ragister"
 
 function App() {
-  // const [text,setText] = useState("")
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const res = await fetch("https://demo-ashy-phi.vercel.app/")
-  //     const data = await res.json()
-  //     console.log(data)
-  //     setText(data)
-  //   }
-  //   fetchData()
-  // },[])
+  
   return (
     <>
-      {/* <h1>{text}</h1> */}
-      <h1>Hello world</h1>
+      <Router>
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
+        </Routes>
+      </Router>
     </>
   )
 }
